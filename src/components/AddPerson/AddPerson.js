@@ -11,6 +11,7 @@ export default function AddPerson() {
               Person Name
             </label>
             <input
+              type="text"
               placeholder="Enter Person Name"
               name="name"
               data-testid="person-name-input"
