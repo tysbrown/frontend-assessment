@@ -17,6 +17,7 @@ export default function AddPerson({ people, setPeople }) {
     const nameIsValid = nameRef.current.value;
     const phoneIsValid = phoneRef.current.value.length >= 10;
 
+    // Preventing default behavior so the page isn't refreshed (which would clear the contact list too)
     e.preventDefault();
 
     // Validate the form
@@ -30,6 +31,11 @@ export default function AddPerson({ people, setPeople }) {
           email: emailRef.current.value,
         },
       ]);
+
+      // Reset fields manually
+      nameRef.current.value = "";
+      phoneRef.current.value = "";
+      emailRef.current.value = "";
     } else {
       alert("Enter Valid Data");
     }
