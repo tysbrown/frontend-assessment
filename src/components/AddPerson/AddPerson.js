@@ -63,7 +63,6 @@ export default function AddPerson({ people, setPeople }) {
             </label>
             <input
               type="number"
-              maxLength={10}
               placeholder="Enter Phone Number"
               name="number"
               data-testid="phone-number-input"
